@@ -17,6 +17,6 @@ spec:
        - name: pat-dockerhub
      containers:
        - name: tomcat
-         image: tgindia2218/my13junebatch:mybuild-number
+         image: tgindia2218/tgdevops13june:pname-buildnum
          ports:
           - containerPort: 8080
