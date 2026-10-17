@@ -9,7 +9,7 @@ pipeline{
 	parameters{
 		        choice(name: 'typeofbuild', choices: ['Release', 'Debug', 'Hotfix'], description: 'Type of build to execute')
 				
-				 string(name: 'packname', defaultValue: 'Ekam Singh', description: 'Who run this job ?')
+				 string(name: 'packname', defaultValue: 'vsftpd', description: 'Who run this job ?')
 
 	}
 	triggers{
@@ -29,7 +29,7 @@ pipeline{
 				sh  'echo $a'
 				sh  'echo $b'
 		     	sh  "echo Env is ->  ${params.typeofbuild}"
-				sh  "echo username is -> ${params.packname}"
+				sh  "echo Requested package name is -> ${params.packname}"
 				sh 'echo $git_token'
 				sh 'chage -l jenkins'
 				sh 'sudo chage -l jenkins'
@@ -51,7 +51,7 @@ pipeline{
 				sh  'echo $a'
 				sh  'echo $b'
   		     	        sh  "echo Env is ->  ${params.typeofbuild}"
-				sh  "echo Username is -> ${params.packname}"
+				sh  "echo Requested package was is -> ${params.packname}"
 				sh 'echo $git_token'
 				sh 'echo $docker_token'				
 				sh '''
