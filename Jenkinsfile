@@ -29,7 +29,7 @@ pipeline{
 				sh  'echo $a'
 				sh  'echo $b'
 		     	sh  "echo Env is ->  ${params.typeofbuild}"
-				sh  "echo Username is -> ${params.packname}"
+				sh  "echo username is -> ${params.packname}"
 				sh 'echo $git_token'
 				sh 'chage -l jenkins'
 				sh 'sudo chage -l jenkins'
