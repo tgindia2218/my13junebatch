@@ -34,7 +34,7 @@ pipeline{
 				sh 'chage -l jenkins'
 				sh 'sudo chage -l jenkins'
 				sh 'echo $docker_token'
-				sh "sudo rpm -qa |  grep ${params.packname}"
+	//			sh "sudo rpm -qa | grep ${params.packname}"
 				sh '''
 						'whoami'
 						'pwd'
