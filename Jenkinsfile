@@ -50,8 +50,8 @@ pipeline{
 				echo "Hello this is my world  "
 				sh  'echo $a'
 				sh  'echo $b'
-		     	sh  "echo Env is ->  ${params.typeofbuild}"
-				sh  "echo Username is -> ${params.whorunthis}"
+  		     	        sh  "echo Env is ->  ${params.typeofbuild}"
+				sh  "echo Username is -> ${params.packname}"
 				sh 'echo $git_token'
 				sh 'echo $docker_token'				
 				sh '''
