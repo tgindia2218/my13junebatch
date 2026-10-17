@@ -14,9 +14,9 @@ spec:
        env: stage
     spec:
      imagePullSecrets:
-       - name: pat-dockerhub
+       - name: <SECRET-NAME-at-k8s-Master>
      containers:
        - name: tomcat
-         image: tgindia2218/tgdevops13june:pname-buildnum
+         image: <CHANGE-YOUR-DOCKER-HUB-REPONAME-HERE>:pname-buildnum
          ports:
           - containerPort: 8080
